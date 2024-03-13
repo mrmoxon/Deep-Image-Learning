@@ -2,7 +2,7 @@
 
 For scores [99.72, 98.93]:
 
-#### Data preprocessing:
+### Data preprocessing:
 
 Only using original MNIST dataset,
 
@@ -31,7 +31,7 @@ Optimizer, Loss function:
 - CategoricalCrossentropy with label smoothing = 0.1
 
 
-#### Callbacks:
+### Callbacks:
 
 ReduceLROnPlateau with learning_rate_patience = 20, learning_rate_decay = 0.2
 
