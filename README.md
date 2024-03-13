@@ -2,27 +2,41 @@
 
 For scores [99.72, 98.93]:
 
-Data preprocessing:
+#### Data preprocessing:
 
 Only using original MNIST dataset,
-Normalise,
+
+Normalise, augment, optimise, call-backs. Train for 100e.
+
 Train on augmented examples:
+
 rotation_range=10,
+
 width_shift_range=0.1,
+
 height_shift_range=0.1,
+
 shear_range=0.2,
+
 zoom_range=0.1,
+
 fill_mode='nearest',
+
 preprocessing_function=lambda x: x + tf.random.normal(tf.shape(x), stddev=0.05)  # Add Gaussian noise
 
 Optimizer, Loss function:
 
 Adam with lr = 0.001
+
 CategoricalCrossentropy with label smoothing = 0.1
 
-Callbacks:
+
+#### Callbacks:
+
 ReduceLROnPlateau with learning_rate_patience = 20, learning_rate_decay = 0.2
+
 ModelCheckpoint to save best checkpoint only
+
 EarlyStopping
 
 Trained for ~100 epochs.
