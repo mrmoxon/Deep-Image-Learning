@@ -79,3 +79,44 @@ _________________________________________________________________
 (Dense)        (None, 10)                5130
 
 Parameter count: 403562
+
+2. Alternative Method:
+
+For score: [99.65, 98.81]:
+2.2m parameters
+
+Model architecture:
+- convolutional layers:
+     * 2 sets of Conv2D layers + Batch Normalization and ReLU activation.
+     * MaxPooling2D layers after each set
+     * Dropout layers, rate = 0.25.
+- fully Connected Layers:
+    * Flatten layer
+    * 2 Dense layers with ReLU activation + Batch Normalization and dropout
+    * Output layer + softmax activation
+
+Data augmentation:
+- featurewise_center=False, 
+- samplewise_center=False, 
+- featurewise_std_normalization=False, 
+- samplewise_std_normalization=False, 
+- zca_whitening=False, 
+- rotation_range=10, 
+- zoom_range = 0.1, 
+- width_shift_range=0.1, 
+- height_shift_range=0.1, 
+- horizontal_flip=False,
+- vertical_flip=False
+
+Optimizer: Adam, lr = 0.001
+- Loss function: categorical crossentropy
+
+Callbacks: learning rate scheduler to adjust the lr (decrease by a factor of 0.9 after each epoch)
+
+batch size = 64
+epochs = 50
+
+
+![image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/aa950ce4-9f4b-4dff-82cb-f65bd8c1869e)
+
+
