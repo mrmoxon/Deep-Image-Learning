@@ -168,5 +168,5 @@ Total training time = ~16 minutes
 
 Trained using = Nvidia P100
 
-https://keats.kcl.ac.uk/tokenpluginfile.php/54b7ca98169ff40f6520ebad632d720c/9705228/mod_forum/post/1486534/CleanShot%202024-03-16%20at%2009.20.37%402x.jpg![image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/c25b1313-5018-4b78-aca7-f54dabe6a32d)
+[image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/c25b1313-5018-4b78-aca7-f54dabe6a32d)
 
