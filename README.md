@@ -80,6 +80,10 @@ _________________________________________________________________
 
 Parameter count: 403562
 
+
+
+
+
 2. Alternative Method:
 
 For score: [99.65, 98.81]:
@@ -116,9 +120,15 @@ Callbacks: learning rate scheduler to adjust the lr (decrease by a factor of 0.9
 batch size = 64
 epochs = 50
 
+
+
+
+
 3. Alternative Method:
 
 For scores [99.79, 98.79]:
+
+500,000 parameters
 
 Dataset:
 
