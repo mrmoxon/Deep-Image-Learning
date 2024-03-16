@@ -116,7 +116,57 @@ Callbacks: learning rate scheduler to adjust the lr (decrease by a factor of 0.9
 batch size = 64
 epochs = 50
 
+3. Alternative Method:
 
-![image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/aa950ce4-9f4b-4dff-82cb-f65bd8c1869e)
+For scores [99.79, 98.79]:
 
+Dataset:
+
+Using the provided MNIST dataset.
+
+### Data Augmentation:
+
+- rotation_range=10,          # Random rotation between 0 and 10 degrees
+
+- width_shift_range=0.1,      # Randomly shift images horizontally (fraction of total width)
+
+- height_shift_range=0.1,     # Randomly shift images vertically (fraction of total height)
+
+- zoom_range=0.1,   # Randomly zoom in/out on images
+
+### Optimizer, Loss function:
+
+optimizer = Adam(lr=0.001, beta_1=0.9, beta_2=0.999 )
+
+loss = 'categorical_crossentropy'
+
+### Callbacks:
+
+1.    Custom learning Function:
+
+def scheduler(epoch, lr):
+
+    if epoch < 10:
+
+        return lr
+
+    else:
+
+        return lr * tf.math.exp(-0.1)
+
+2.    Model Checkpoint:
+
+Save the best model based on value accuracy.
+
+Batch Size = 256 (To better utilise GPU)
+
+Epochs = 50
+
+Per Epoch time = 20 seconds
+
+Total training time = ~16 minutes
+
+Trained using = Nvidia P100
+
+https://keats.kcl.ac.uk/tokenpluginfile.php/54b7ca98169ff40f6520ebad632d720c/9705228/mod_forum/post/1486534/CleanShot%202024-03-16%20at%2009.20.37%402x.jpg![image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/c25b1313-5018-4b78-aca7-f54dabe6a32d)
 
