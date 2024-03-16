@@ -80,9 +80,9 @@ _________________________________________________________________
 
 Parameter count: 403562
 
-
-
-
+<br>
+<br>
+<br>
 
 2. Alternative Method:
 
@@ -120,9 +120,9 @@ Callbacks: learning rate scheduler to adjust the lr (decrease by a factor of 0.9
 batch size = 64
 epochs = 50
 
-
-
-
+<br>
+<br>
+<br>
 
 3. Alternative Method:
 
