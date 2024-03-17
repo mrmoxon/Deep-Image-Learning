@@ -176,6 +176,60 @@ Per Epoch time = 20 seconds
 
 Total training time = ~16 minutes
 
+<br>
+<br>
+<br>
+
+For scores [99.63, 98.79]:
+
+Dataset:
+
+Using the provided MNIST dataset.
+
+Data Augmentation:
+
+rotation_range=8 
+width_shift_range=0.08
+height_shift_range=0.08 
+shear_range=0.3
+zoom_range=0.8
+
+Optimizer, Loss function:
+
+optimizer = Adam
+loss = categorical_crossentropy
+
+Callbacks:
+
+1. Learning Rate Schedulers
+ReduceLROnPlateau(monitor='val_accuracy', patience=3, verbose=1, factor=0.5, min_lr=0.00001) 
+
+2. Early Stopping
+EarlyStopping(monitor='val_accuracy', patience=10, restore_best_weights=True)
+
+Training:
+
+batch_size = 170
+steps_per_epoch=x_train.shape[0]//batch_size
+epochs=30
+
+Model:
+___________________________________________________________________________________
+Layer (type)                                        Output Shape               Param # 
+=================================================================
+conv2d (Conv2D)                               (None, 28, 28, 32)            832 
+conv2d_1 (Conv2D)                           (None, 28, 28, 32)        25632 
+max_pooling2d (MaxPooling2D)     (None, 14, 14, 32)                0 
+dropout (Dropout)                             (None, 14, 14, 32)                0 
+conv2d_2 (Conv2D)                            (None, 14, 14, 64)       18496 
+conv2d_3 (Conv2D)                            (None, 14, 14, 64)       36928 
+max_pooling2d_1(MaxPooling 2D) (None, 7, 7, 64)                    0 
+dropout_1 (Dropout)                         (None, 7, 7, 64)                   0 
+flatten (Flatten)                                   (None, 3136)                       0 
+...
+Non-trainable params: 0
+
+
 Trained using = Nvidia P100
 
 [image](https://github.com/mrmoxon/Deep-Image-Learning/assets/110777587/c25b1313-5018-4b78-aca7-f54dabe6a32d)
