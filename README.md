@@ -180,6 +180,8 @@ Total training time = ~16 minutes
 <br>
 <br>
 
+4. Alternative Method
+
 For scores [99.63, 98.79]:
 
 Dataset:
