@@ -220,15 +220,25 @@ ________________________________________________________________________________
 Layer (type)                                        Output Shape               Param # 
 =================================================================
 conv2d (Conv2D)                               (None, 28, 28, 32)            832 
+
 conv2d_1 (Conv2D)                           (None, 28, 28, 32)        25632 
+
 max_pooling2d (MaxPooling2D)     (None, 14, 14, 32)                0 
+
 dropout (Dropout)                             (None, 14, 14, 32)                0 
+
 conv2d_2 (Conv2D)                            (None, 14, 14, 64)       18496 
+
 conv2d_3 (Conv2D)                            (None, 14, 14, 64)       36928 
+
 max_pooling2d_1(MaxPooling 2D) (None, 7, 7, 64)                    0 
+
 dropout_1 (Dropout)                         (None, 7, 7, 64)                   0 
+
 flatten (Flatten)                                   (None, 3136)                       0 
+
 ...
+
 Non-trainable params: 0
 
 
